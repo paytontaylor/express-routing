@@ -6,6 +6,7 @@ function createFrequencyCounter(arr) {
 }
 
 const mean = (arr) => {
+  if (arr.length === 0) return 0;
   let ans = 0;
   for (let i = 0; i < arr.length; i++){
     ans += Number(arr[i]);
@@ -14,6 +15,7 @@ const mean = (arr) => {
 }
 
 const median = (arr) => {
+  if (arr.length === 0) return 0;
   const middleIdx = Math.floor(arr.length / 2);
   if (arr.length % 2 !== 0) {
     return arr[middleIdx];
@@ -22,6 +24,7 @@ const median = (arr) => {
 }
 
 const mode = (arr) => {
+  if (arr.length === 0) return 0;
   let freq = createFrequencyCounter(arr);
 
   let count = 0;
